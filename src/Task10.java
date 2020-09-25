@@ -7,19 +7,16 @@ public class Task10 {
         int row = in.nextInt();
         System.out.println("Введите кол-во столбцов в таблице: ");
         int column = in.nextInt();
-        int i, j;
         int table[][] = new int[row][column];
-        for (i = 0; i < row; i = i + 1) {
-            for (j = 0; j < column; j = j + 1) {
-                System.out.println("Введите " +(j+1)+ "-й элемент таблицы в " +(i+1)+ "-й строке");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.println("Введите " + (j + 1) + "-й элемент таблицы в " + (i + 1) + "-й строке");
                 int var = in.nextInt();
-                table[i][j] = (var);
+                table[i][j] = var;
             }
         }
-        for (i = 0; i == 0; i++) {
-            for (j = 0; j < column; j = j+1) {
-                System.out.print(" " + (table[i][j]*3) + " ");
+            for (int j = 0; j < column; j++) {
+                System.out.print(" " + (table[0][j] * 3) + " ");
             }
-        }
     }
 }
