@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task15 {
+public class Final2{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите размер массива: ");
@@ -12,16 +12,15 @@ public class Task15 {
             int var = in.nextInt();
             A[i] = var;
         }
-        for (int i = 1; i < A.length; i++) {
-            int key = A[i];
-            int j = i - 1;
-            while (j >= 0 && A[j] > key) {
-                A[j + 1] = A[j];
-                j = j - 1;
+        for (int i = 0; i < A.length; i++) { //сортировка вставками
+            int temp = A[i];
+            int j = i;
+            while (j > 0 && A[j - 1] > temp) {
+                A[j] = A[j - 1];
+                j--;
+                A[j] = temp;
             }
-            A[j + 1] = key;
         }
-        String B = Arrays.toString(A);
-        System.out.print(B);
+        System.out.println(Arrays.toString(A));
     }
 }
